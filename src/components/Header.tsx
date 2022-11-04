@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 export default function Header() {
     return (
@@ -27,12 +28,23 @@ export default function Header() {
 
                     <Box sx={{
                         display: "flex",
-                        justifyContent: "space-between",
-                        m: 3,
-                        backgroundColor: "lightgray"
+                        justifyContent: "space-evenly",
                     }}>
-                        <Link to="/" > All Hotels </Link>
-                        <Link to="/create" > New Hotels </Link>
+                        <Button sx={{
+                            backgroundColor: "ButtonShadow", m: 5
+                        }}>
+                            <Link to="/" >
+                                All Hotels
+                            </Link>
+                        </Button>
+                        <br />
+                        <Button sx={{
+                            backgroundColor: "ButtonShadow", m: 5
+                        }}>
+                            <Link to="/create" >
+                                New Hotels
+                            </Link>
+                        </Button>
                     </Box>
 
                 </Toolbar>
