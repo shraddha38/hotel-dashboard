@@ -6,7 +6,6 @@ import Information from "./Information";
 
 function Details() {
     const { id } = useParams();
-    console.log(id, "id")
 
     // Fetch a single document
     const getHotel = doc(firestore, `hotels/${id}`);
@@ -37,9 +36,9 @@ function Details() {
     if (isLoading) return <div className="loading" />;
     return (
         <div className="hotel-details">
-            {/* {Object.keys(hotel) && Object.keys(hotel).length ? (
-                <Information hotel={hotel} detailsPage />
-            ) : null} */}
+            {Object.keys(hotel) && Object.keys(hotel).length ? (
+                <Information id={hotel} />
+            ) : null}
         </div>
     );
 }

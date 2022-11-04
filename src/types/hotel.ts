@@ -2,7 +2,7 @@ export interface NewHotelType {
     country?: string;
     description?: string;
     feature?: string;
-    id: string;
+    id?: string;
     imageUrl?: string;
     includingFoodPrice?: string;
     noOfReviews?: number;

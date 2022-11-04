@@ -14,7 +14,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { NewHotelType } from '../types/hotel';
+import { AddHotelType, NewHotelType } from '../types/hotel';
 import { Box } from '@mui/system';
 import { StarBorder, StarBorderOutlined } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
@@ -35,7 +35,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
     }),
 }));
 interface Iprops {
-    id: NewHotelType
+    id: NewHotelType,
 }
 export default function Information({ id }: Iprops) {
     const [expanded, setExpanded] = React.useState(false);

@@ -30,7 +30,7 @@ const Card = () => {
                     hotels.map((id) => {
                         return <>
                             <Information id={id} />
-                            <Button onClick={() => { deleteHotel(id.id, navigate("/")) }}>
+                            <Button onClick={() => { if (id.id) deleteHotel(id.id, navigate("/")) }}>
                                 Delete Hotel</Button>
                         </>
                     })) : (<Typography> No hotel found</Typography>)
