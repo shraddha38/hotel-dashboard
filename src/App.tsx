@@ -6,13 +6,14 @@ import Create from './components/Create';
 import Details from './components/Details';
 import NotFound from './components/NotFound';
 import Card from './components/Card';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      Hotel App
-      <BrowserRouter>
 
+      <BrowserRouter>
+        <Header />
         <Routes >
           <Route path="/create" element={<Create />} />
           <Route path="/hotels/:id" element={<Details />} />
