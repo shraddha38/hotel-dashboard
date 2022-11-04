@@ -17,6 +17,8 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { NewHotelType } from '../types/hotel';
 import { Box } from '@mui/system';
 import { StarBorder, StarBorderOutlined } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 interface ExpandMoreProps extends IconButtonProps {
     expand: boolean;
@@ -81,6 +83,9 @@ export default function Information({ id }: Iprops) {
                         <ExpandMoreIcon />
                     </ExpandMore>
                 </CardActions>
+                <Link to={`/hotels/${id.id}`}>
+                    <Button variant="outlined" color="success">View More Information</Button>
+                </Link>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
                         <Typography paragraph>Packages: </Typography>
@@ -95,6 +100,7 @@ export default function Information({ id }: Iprops) {
                         </Typography>
                     </CardContent>
                 </Collapse>
+
             </Card>
         </Box>
     );
